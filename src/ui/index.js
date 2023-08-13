@@ -1,1 +1,3 @@
-export * from "./components/ChekingAuth";
+
+
+export * from './components/CheckingAuth';
