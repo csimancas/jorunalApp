@@ -60,7 +60,6 @@ export const registerUser = async ({ displayName, email, password }) => {
 };
 
 export const loginWithEmailPassword = async ({ email, password }) => {
-  console.log("PROVIDER", email, password);
   try {
     const resp = await signInWithEmailAndPassword(
       FirebaseAuth,
@@ -78,4 +77,8 @@ export const loginWithEmailPassword = async ({ email, password }) => {
   } catch (error) {
     return { ok: false, errorMessage: error.message };
   }
+};
+
+export const logoutFirebase = async () => {
+  return await FirebaseAuth.signOut();
 };
