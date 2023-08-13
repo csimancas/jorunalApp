@@ -38,6 +38,7 @@ export const startCreatingUserWithEmailPassword = ({
 };
 
 export const startLoginWithEmailPassword = ({ email, password }) => {
+  console.log("THUNKS", email, password);
   return async (dispatch) => {
     dispatch(chekingCredentials());
 

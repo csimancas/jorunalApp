@@ -60,6 +60,7 @@ export const registerUser = async ({ displayName, email, password }) => {
 };
 
 export const loginWithEmailPassword = async ({ email, password }) => {
+  console.log("PROVIDER", email, password);
   try {
     const resp = await signInWithEmailAndPassword(
       FirebaseAuth,

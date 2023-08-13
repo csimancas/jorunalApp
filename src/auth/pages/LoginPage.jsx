@@ -11,8 +11,8 @@ import {
 } from "../../store/auth";
 
 const formData = {
-  email: "",
-  password: "",
+  email: "jose@google.com",
+  password: "123456",
 };
 
 const formValidations = {
@@ -39,6 +39,8 @@ export const LoginPage = () => {
   } = useForm(formData, formValidations);
 
   const isAuthenticated = useMemo(() => status === "checking", [status]);
+
+  console.log(email, password);
 
   const onSubmit = (e) => {
     e.preventDefault();
